@@ -23,6 +23,7 @@
 ```bash
 git clone https://github.com/alanrobg/pry_caso_practico_arg_2026.git
 cd automation-case/src
+´´´
 
 **2.Crear y activar un entorno virtual**
 python -m venv venv
@@ -38,4 +39,9 @@ pip install fastapi uvicorn requests
 
 **4. Ejecutar el servidor local**
 uvicorn main:app --reload
+
+Ejemplos de uso (Request / Response)
+Puedes probar el endpoint principal realizando una petición GET mediante cURL, Postman o desde el mismo navegador:
+
+curl -X 'GET' 'http://localhost:8000/api/v1/processed-data' -H 'accept: application/json'
 
