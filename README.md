@@ -17,6 +17,23 @@ Para esta implementación se optó por un stack basado enteramente en código:
 
 *Nota: La documentación detallada sobre el flujo de datos y el diagrama de la solución se encuentra en `/docs/architecture.md`*.
 
+# Caso Técnico - Automation Developer: Pipeline ETL con Python
+
+## Descripción de la solución
+Esta solución implementa un pipeline de automatización estructurado bajo el patrón ETL (Extract, Transform, Load/Expose). Su objetivo es consumir información desde una API pública (DummyJSON), limpiar y transformar dicha información aplicando reglas de negocio (filtrado de stock y cálculo de descuentos), y finalmente exponer el resultado de forma estructurada a través de un endpoint REST.
+
+## Estructura del Proyecto
+```text
+/automation-case
+├── src/
+│   ├── main.py             # Punto de entrada y definición del endpoint (FastAPI)
+│   ├── extractor.py        # Lógica para conectarse a la API externa y manejar errores
+│   └── transformer.py      # Lógica pura de filtrado y transformación de datos
+├── docs/                  
+│   └── architecture.md     # Documentación de flujo de datos y decisiones técnicas
+├── requirements.txt        # Dependencias del proyecto
+└── README.md               # Instrucciones de ejecución y documentación principal
+
 ## Cómo ejecutar o probar
 
 **1. Clonar el repositorio y navegar a la carpeta raíz**
