@@ -2,8 +2,8 @@ from fastapi import FastAPI, HTTPException
 import logging
 
 # Importamos nuestros módulos de extracción y transformación
-from extractor import fetch_products
-from transformer import process_products
+from .extractor import fetch_products
+from .transformer import process_products
 
 # Configuración de logs
 logging.basicConfig(level=logging.INFO)
